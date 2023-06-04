@@ -49,11 +49,16 @@ function App() {
         items={[
           {
             key: "1",
+            label: `Resources Data`,
+            children: <ResourcesTable rawData={rawData} />,
+          },
+          {
+            key: "2",
             label: `Location Wise Statistics`,
             children: <LocationInventoryComponent rawData={rawData} />,
           },
           {
-            key: "2",
+            key: "3",
             label: `Daily Resource Cost`,
             children: (
               <LineChartComponent
@@ -62,11 +67,7 @@ function App() {
               />
             ),
           },
-          {
-            key: "3",
-            label: `Resources Data`,
-            children: <ResourcesTable rawData={rawData} />,
-          },
+
         ]}
       />
     </div>
